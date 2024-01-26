@@ -62,12 +62,13 @@ export default {
 };
 ```
 
-### 6. 빌드 script 추가
+### 6. 빌드 script 추가 및 type module로 설정
 ```
 // package.json
 {
   "scripts": {
     "build": "rollup -c"
-  }
+  },
+  "type": "module",
 }
 ```

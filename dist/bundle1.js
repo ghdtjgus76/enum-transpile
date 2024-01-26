@@ -4,6 +4,5 @@ var E;
     (E.DELIVERING = "DELIVERING"),
     (E.DELIVERED = "DELIVERED");
 })(E || (E = {})),
-  console.log(E.DELIVERED),
-  console.log("DELIVERED");
-//# sourceMappingURL=bundle.js.map
+  console.log(E.DELIVERED);
+//# sourceMappingURL=bundle1.js.map

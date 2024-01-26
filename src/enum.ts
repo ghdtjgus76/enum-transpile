@@ -9,3 +9,9 @@ export const enum DeliveryStatus2 {
   DELIVERING = "DELIVERING",
   DELIVERED = "DELIVERED",
 }
+
+export enum DeliveryStatus3 {
+  READY,
+  DELIVERING,
+  DELIVERED,
+}

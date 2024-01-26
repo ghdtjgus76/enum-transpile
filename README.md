@@ -48,12 +48,17 @@ import typescript from "rollup-plugin-typescript2";
 import { terser } from "rollup-plugin-terser";
 
 export default {
-  input: "src/index.ts",
+  input: "src/index.ts", // 프로젝트의 진입 파일
   output: {
-    file: "dist/bundle.js",
-    format: "iife",
+    file: "dist/bundle.js", // 번들 결과물 파일 경로
+    format: "iife", // 브라우저에서 즉시 실행 가능한 형태로 번들링
   },
-  plugins: [resolve(), commonjs(), typescript(), terser()],
+  plugins: [
+    resolve(), // node_modules에서 모듈을 해석
+    commonjs(), // CommonJS 모듈을 ES6 형태로 변환
+    typescript(), // TypeScript 컴파일
+    terser(), // 코드 압축
+  ],
 };
 ```
 

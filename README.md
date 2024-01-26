@@ -73,3 +73,7 @@ export default {
   "type": "module",
 }
 ```
+
+### 관련 블로그 글
+[enum은 어떻게 써야하는가?] https://gugu76.tistory.com/130 <br />
+[Rollup 번들러로 enum과 const enum 트랜스파일링해보기] https://gugu76.tistory.com/131

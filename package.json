@@ -1,6 +1,9 @@
 {
   "name": "enum-transpile",
   "packageManager": "yarn@3.6.3",
+  "scripts": {
+    "build": "rollup -c"
+  },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",

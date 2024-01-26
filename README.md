@@ -28,7 +28,7 @@ npx tsc --init
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "jsx": "react",
-    "isolatedModules": true
+    "preserveConstEnums": false
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts"],
   "exclude": ["node_modules"]
@@ -48,16 +48,17 @@ import typescript from "rollup-plugin-typescript2";
 import { terser } from "rollup-plugin-terser";
 
 export default {
-  input: "src/index.ts", // 프로젝트의 진입 파일
+  input: "src/index.ts",  // 번들링의 시작점이 되는 파일
   output: {
-    file: "dist/bundle.js", // 번들 결과물 파일 경로
-    format: "iife", // 브라우저에서 즉시 실행 가능한 형태로 번들링
+    file: "dist/bundle.js",  // 번들된 결과물의 출력 파일
+    format: "es",  // 출력 형식 (여기서는 ECMAScript 모듈 형식)
+    sourcemap: true,  // 소스맵 생성 여부
   },
   plugins: [
-    resolve(), // node_modules에서 모듈을 해석
-    commonjs(), // CommonJS 모듈을 ES6 형태로 변환
-    typescript(), // TypeScript 컴파일
-    terser(), // 코드 압축
+    resolve(),       // 외부 모듈 해결
+    commonjs(),      // CommonJS 모듈을 ES6 형태로 변환
+    typescript(),    // TypeScript 파일을 트랜스파일
+    terser(),        // JavaScript 코드 압축
   ],
 };
 ```
